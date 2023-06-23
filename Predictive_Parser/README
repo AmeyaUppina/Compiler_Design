@@ -1,5 +1,9 @@
-This program carries out predictive parsing of a LL(1) Grammar.
-Given the input as a grammar without left recursion, it calculates and gives the output as the set of FIRST and FOLLOW of every non-terminal present in the grammar.
+This program carries out FIRST and FOLLOW calculations, parse table creating and input string parsing of a LL(1) Grammar.
+Note:
+The grammar given as input must be non left recursive
+
+Code File 1:
+firstfollow.c: It calculates and gives the output as the set of FIRST and FOLLOW of every non-terminal present in the grammar.
 
 Requirements:
 gcc-compiler to compile and execute the '.c' file
