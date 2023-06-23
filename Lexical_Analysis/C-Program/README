@@ -1,5 +1,7 @@
 This program does the lexical analysis of a C code.
 It carries out tokenization of the input C program and outputs its various types of tokens.
 
+This program is written in C Programming Language.
+
 Requirements:
 gcc-compiler to compile and execute the '.c' file
