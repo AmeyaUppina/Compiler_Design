@@ -1,2 +1,2 @@
 # Compiler_Design
-Codes for all codes of Compiler Design Lab course
+This Repository consists of all the codes written as a part of the Lab course of Compiler Design BCSE307P in VIT Chennai.
