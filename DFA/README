@@ -1,1 +1,4 @@
-DFA 
+DFA construction using C Programming Language.
+
+Requirements:
+gcc-compiler to compile and execute the '.c' file
