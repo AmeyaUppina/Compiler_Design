@@ -8,19 +8,17 @@ lex/flex to compile and execute the '.l' file
 
 Step of execution:
 1) Install Lex in Ubuntu via the terminal using the commands:
-sudo apt-get update
-sudo apt-get install flex
-sudo apt-get install bison
+     sudo apt-get update
+     sudo apt-get install flex
+     sudo apt-get install bison
 
 2) The 'code.l' file is the one we will be executing.
 
 3)  The 'test.txt' is an input file consisting of the C code used for tokenization
-Both in same directory.
 
- 4) In terminal(in the directory) use the commands:
-lex code.l
-cc lex.yy.c
-./a.out
+4) In terminal(in the directory) use the commands:
+     lex code.l
+     cc lex.yy.c
+     ./a.out
 
-5) When prompted to input the file name as test.txt =
-
+5) When prompted to input the file name as test.txt (Note: the code.l and test.txt must be in the same directory)
