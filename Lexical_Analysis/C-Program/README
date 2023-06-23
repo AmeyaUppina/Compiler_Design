@@ -5,3 +5,9 @@ This program is written in C Programming Language.
 
 Requirements:
 gcc-compiler to compile and execute the '.c' file
+
+Note:
+For the main function choose one of the 3 options available depending on whether your requirement is:
+1) Code to be analyzed is input as a predefined array in the code.
+2) Code to be analyzed is stored in a file.
+3) Code to be analyzed has to be gotten as user input, saved in a file and then read from the file.
