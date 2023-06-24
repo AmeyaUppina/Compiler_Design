@@ -83,7 +83,6 @@ void main()
 char inp[80], x, p, dl[80], y, bl = 'a';
 int i = 0, j, k, l, n, m, c, len;
 // clrscr();
-printf("Ameya Uppina\n21BCE1361\n");
 printf("Enter the string input :");
 scanf("%s", inp);
 len = strlen(inp);
