@@ -1,1 +1,24 @@
+This program implements an infix expression to postfix expression converter using lex and yacc coding.
 
+Requirements:
+lex/flex to compile and execute the '.l' file
+yacc to compile and execute the '.y. file
+gcc to compile and execute the '.c' file
+
+
+Step of execution:
+1) Install Lex and YACC in Ubuntu via the terminal using the commands:
+     sudo apt-get update
+     sudo apt-get install flex
+     sudo apt-get install bison
+     sudo apt-get install bison flex
+
+2) The 'lexcode.l' and 'yaccfile.y' are the files we will be executing.
+
+3) In terminal(in the directory) use the commands:
+     yacc -d yaccfile.y     
+     lex code.l
+     gcc yy.tab.c
+     ./a.out
+
+5) When prompted, input an arithemaetic expression. Eg.a*(b+c-d)/e
