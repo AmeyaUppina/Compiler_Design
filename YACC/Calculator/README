@@ -1,9 +1,9 @@
 This program implements a simple calculator using lex and yacc coding.
 
-This program is written in Lex Programming Language.
-
 Requirements:
 lex/flex to compile and execute the '.l' file
+yacc to compile and execute the '.y. file
+gcc to compile and execute the '.c' file
 
 
 Step of execution:
