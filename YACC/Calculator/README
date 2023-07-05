@@ -21,4 +21,4 @@ Step of execution:
      gcc yy.tab.c
      ./a.out
 
-5) When prompted, input an arithemaetic expression. Eg.a*(b+c-d)/e
+5) When prompted, input an an expression to calculate Eg. 5+2*3
