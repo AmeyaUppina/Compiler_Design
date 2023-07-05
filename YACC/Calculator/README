@@ -1,1 +1,24 @@
+This program implements a simple calculator using lex and yacc coding.
 
+This program is written in Lex Programming Language.
+
+Requirements:
+lex/flex to compile and execute the '.l' file
+
+
+Step of execution:
+1) Install Lex and YACC in Ubuntu via the terminal using the commands:
+     sudo apt-get update
+     sudo apt-get install flex
+     sudo apt-get install bison
+     sudo apt-get install bison flex
+
+2) The 'lexcode.l' and 'yaccfile.y' are the files we will be executing.
+
+3) In terminal(in the directory) use the commands:
+     yacc -d yaccfile.y     
+     lex code.l
+     gcc yy.tab.c
+     ./a.out
+
+5) When prompted, input an arithemaetic expression. Eg.a*(b+c-d)/e
