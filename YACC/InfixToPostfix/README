@@ -18,7 +18,7 @@ Step of execution:
 3) In terminal(in the directory) use the commands:
      yacc -d yaccfile.y     
      lex code.l
-     gcc yy.tab.c
+     gcc y.tab.c
      ./a.out
 
 5) When prompted, input an arithemaetic expression. Eg.a*(b+c-d)/e
