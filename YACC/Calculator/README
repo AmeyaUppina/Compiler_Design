@@ -17,7 +17,7 @@ Step of execution:
 
 3) In terminal(in the directory) use the commands:
      yacc -d yaccfile.y     
-     lex code.l
+     lex lexfile.l
      gcc y.tab.c
      ./a.out
 
