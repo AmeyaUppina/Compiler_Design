@@ -29,7 +29,7 @@ int k;
 char ck;
 int e;
 
-int main(int argc, char** argv)
+int main()
 {
     int jm = 0;
     int km = 0;
