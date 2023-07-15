@@ -1,122 +1,83 @@
-#include <stdio.h>
-#include <string.h>
-int isOperator(char c)
+#include <bits/stdc++.h>
+using namespace std;
+int calc(int n1, int n2, string op)
 {
-    if (c == '+' || c == '-' || c == '/' || c == '*' || c == '=' || c == ';' || c == '(' || c == ')' || c == '{' || c == '}')
-    {
-        return 1;
-    }
-    return 0;
-}
-
-int isKeyword(char *buffer, int buff_count)
+if (op == "+")
 {
-    if (!strcmp(buffer, ""))
-    {
-        return 0;
-    }
-    const char *keywords[] = {"print", "int", "void", "main"};
-    for (int i = 0; i < 2; i++)
-    {
-        if (!strncmp(buffer, keywords[i], buff_count))
-        {
-            return 1;
-        }
-    }
-    return 0;
+return n1 + n2;
 }
-
-int isConstant(char *buffer, int count)
+else if (op == "-")
 {
-    if (!strcmp(buffer, ""))
-    {
-        return 0;
-    }
-    int c = 1;
-    for (int i = 0; i < count; i++)
-    {
-        if (!(buffer[i] >= 48 && buffer[i] <= 57))
-        {
-            c = 0;
-        }
-    }
-    return c;
+return n1 - n2;
 }
-
+else if (op == "*")
+{
+return n1 * n2;
+}
+else if (op == "/")
+{
+return n1 / n2;
+}
+else
+{
+return -1;
+}
+}
 int main()
 {
-    char keywordList[20][255];
-    int keyword_count = 0;
-    char identList[20][255];
-    int ident_count = 0;
-    char constList[20][255];
-    char const_count = 0;
-    char symbols[20];
-    char symb_count = 0;
-    FILE *ptr = fopen("D:/Ameya/OneDrive/ProgramProjects/Compiler_Design/Code_Optimization/test.txt", "r");
-    if (ptr == NULL)
-    {
-        printf("File Not Found");
-    }
-    char c = 0;
-    char buffer[255];
-    int buff_count;
-    int temp;
-    while (fscanf(ptr, "%c", &c) == 1)
-    {
-        buff_count = 0;
-        strcpy(buffer, "");
-        while (c != ' ' && c != '\n')
-        {
-            if (c == ';')
-            {
-                break;
-            }
-            buffer[buff_count++] = c;
-            fscanf(ptr, "%c", &c);
-        }
-        temp = 0;
-        while (temp < buff_count)
-        {
-            if (isOperator(buffer[temp]))
-            {
-                symbols[symb_count++] = buffer[temp];
-                buffer[temp] = 0;
-            }
-            temp++;
-        }
-        if (isKeyword(buffer, buff_count))
-        {
-            strcpy(keywordList[keyword_count++], buffer);
-        }
-        else if (isConstant(buffer, buff_count))
-        {
-            strncpy(constList[const_count++], buffer, buff_count);
-        }
-        else if (strcmp(buffer, "") && strcmp(buffer, " "))
-        {
-            strncpy(identList[ident_count++], buffer, buff_count);
-        }
-    }
-    printf("\nKeyword list:\n");
-    for (int i = 0; i < keyword_count; i++)
-    {
-        printf("%s\n", keywordList[i]);
-    }
-    printf("\nIdentifier list:\n");
-    for (int i = 0; i < ident_count; i++)
-    {
-        printf("%s\n", identList[i]);
-    }
-    printf("\nConstant list:\n");
-    for (int i = 0; i < const_count; i++)
-    {
-        printf("%s\n", constList[i]);
-    }
-    ("\nSymbol list:\n");
-    for (int i = 0; i < symb_count; i++)
-    {
-        printf("%c\n", symbols[i]);
-    }
-    fclose(ptr);
+vector<vector<string>> vs;
+int u;
+cin >> u;
+for (int i = 0; i < u + 1; i++)
+{
+string S, T;
+getline(cin, S);
+stringstream X(S);
+vector<string> v1;
+while (getline(X, T, ' '))
+v1.push_back(T);
+vs.push_back(v1);
+42
+}
+vs.erase(vs.begin());
+vector<int> buff(u, -1);
+int i = 0;
+for (auto &v : vs)
+{
+if (isdigit(v[1][0]))
+{
+int n = stoi(v[1]);
+if (buff[n] != -1)
+v[1] = "#" + to_string(buff[n]);
+}
+if (isdigit(v[2][0]))
+{
+int n = stoi(v[2]);
+if (buff[n] != -1)
+v[2] = "#" + to_string(buff[n]);
+}
+if ((v[1].rfind("#", 0) == 0) && (v[2].rfind("#", 0) == 0))
+{
+v[1].erase(v[1].begin());
+v[2].erase(v[2].begin());
+buff[i] = calc(stoi(v[1]), stoi(v[2]), v[3]);
+cout << buff[i] << endl;
+}
+i++;
+}
+vector<vector<string>> cp;
+for (int i = 0; i < u; i++)
+{
+if (buff[i] == -1)
+{
+cp.push_back(vs[i]);
+}
+}
+for (auto v : cp)
+{
+for (auto v1 : v)
+cout << v1 << " ";
+cout << "\n";
+}
+return 0;
 }
